@@ -1,72 +1,59 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
 
 <head>
-    <base href="/" />
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
 
-    <meta charset="UTF-8" />
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
-    <meta name="description" content="Type you description" />
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
 
-    <!-- iOS meta tags & icons -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="You title" />
-    <link rel="apple-touch-icon" href="icons/icon-192x192.png" />
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="design_test_app">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
 
-    <meta name="theme-color" content="#474747" />
-    <meta name="background-color" content="#474747" />
+  <title>design_test_app</title>
+  <link rel="manifest" href="manifest.json">
 
-    <title>You title</title>
-    <link rel="manifest" href="manifest.json" />
-
-    <style>
-        #loading-indicator {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            border: 2px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 2px solid #3380ff;
-            width: 20px;
-            height: 20px;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = "4183733500";
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
 </head>
 
 <body>
-    <div id="loading-indicator"></div>
-    <!--suppress JSUnresolvedReference, JSUnusedGlobalSymbols -->
-    <script>
-
-        //             -webkit-animation: spin 1s linear infinite;
-        // { { flutter_js } } // ignore the errors. Do not add any quotes ("" or '')
-        // { { flutter_build_config } } // ignore the errors. Do not add any quotes ("" or '')
-
-        window.addEventListener('load', function () {
-            let loading = document.querySelector('#loading-indicator');
-            _flutter.loader.load({
-                onEntrypointLoaded: async function (engineInitializer) {
-                    const appRunner = await engineInitializer.initializeEngine({ renderer: 'html' }); // {renderer: 'html'} can be completely removed or replaced by 'canvaskit'
-                    await appRunner.runApp();
-                    loading.remove(); // Removing the native loading indicator after loading the Flutter app.
-                }
-            });
-        });
-    </script>
+  <script>
+    window.addEventListener('load', function (ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function (engineInitializer) {
+          engineInitializer.initializeEngine().then(function (appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
