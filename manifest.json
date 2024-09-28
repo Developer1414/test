@@ -1,6 +1,6 @@
 {
-    "name": "design_test_app",
-    "short_name": "design_test_app",
+    "name": "web_mini_casino",
+    "short_name": "web_mini_casino",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
