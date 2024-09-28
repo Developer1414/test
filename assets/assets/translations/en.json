@@ -17,9 +17,17 @@
     "leaderBoard_title": "Leader Board",
     "tasks_alertDialog_notEnoughMoney": "To start the task, you must have at least {} on your balance!",
     "alertDialog_content_blockMessage": "You are blocked until {}",
+    "alertDialog_title_soon": "Soon",
+    "alertDialog_soon_content": "This feature will be available in future updates!",
     "settings_title": "Settings",
     "settings_language_section_title": "Language:",
     "profile_title": "Profile",
+    "profile_section_username": "Username",
+    "profile_section_balance": "Balance",
+    "profile_section_statistic": "Statistic",
+    "profile_section_statistic_totalBets": "Total bets: {}",
+    "profile_section_statistic_totalTasks": "Total tasks: {}",
+    "profile_section_statistic_totalInvitedFriends": "Total invited friends: {}",
     "notifications_title": "Notifications",
     "menu_button_inviteAFriends": "INVITE A FRIENDS"
 }

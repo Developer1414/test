@@ -17,9 +17,17 @@
     "leaderBoard_title": "Лидеры",
     "tasks_alertDialog_notEnoughMoney": "Для начала выполнения задания на вашем балансе должно быть не менее {}!",
     "alertDialog_content_blockMessage": "Вы заблокированы до {}",
+    "alertDialog_title_soon": "Скоро",
+    "alertDialog_soon_content": "Эта функция будет доступна в будущих обновлениях!",
     "settings_title": "Настройки",
     "settings_language_section_title": "Язык:",
     "profile_title": "Профиль",
+    "profile_section_username": "Никнейм",
+    "profile_section_balance": "Баланс",
+    "profile_section_statistic": "Статистика",
+    "profile_section_statistic_totalBets": "Всего ставок: {}",
+    "profile_section_statistic_totalTasks": "Всего заданий: {}",
+    "profile_section_statistic_totalInvitedFriends": "Всего приглашенных: {}",
     "notifications_title": "Уведомления",
     "menu_button_inviteAFriends": "ПРИГЛАСИТЬ ДРУЗЕЙ"
 }
